@@ -3,10 +3,9 @@
         "id": "plugin-mivo-theme",
         "name": "Mivo Theme Downloader",
         "description": "Allows downloading the Captive Portal theme with auto-configuration.",
-        "version": "1.0.0",
         "author": "DyzulkDev",
+        "version": "1.0.0",
         "category": "Hotspot Tools",
-        "scope": "Session",
         "tags": [
             "theme",
             "downloader",
@@ -15,23 +14,7 @@
         ],
         "repo": "https://github.com/mivodev/plugin-mivo-theme",
         "download": "https://github.com/mivodev/plugin-mivo-theme/archive/refs/heads/main.zip",
-        "readme": "https://raw.githubusercontent.com/mivodev/plugin-mivo-theme/main/README.md"
-    },
-    {
-        "id": "plugin-backup-manager",
-        "name": "Backup Manager (Demo)",
-        "description": "Automated daily backups to Google Drive.",
-        "version": "2.1.0",
-        "author": "MivoTeam",
-        "category": "System Tools",
-        "scope": "Global",
-        "tags": [
-            "backup",
-            "security",
-            "cloud"
-        ],
-        "repo": "#",
-        "download": "#",
-        "readme": "#"
+        "readme": "/plugins/plugin-mivo-theme",
+        "updated_at": "2026-01-18T09:01:34Z"
     }
 ]

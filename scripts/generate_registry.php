@@ -84,8 +84,8 @@ foreach ($repos as $repo) {
         'category' => $metadata['category'] ?? 'Uncategorized',
         'tags' => array_map('trim', explode(',', $metadata['tags'] ?? '')),
         'repo' => $repo['html_url'],
-        'download' => $repo['html_url'] . '/archive/refs/heads/' . $repo['default_branch'] . '.zip', // Default to main/master zip
-        'readme' => $repo['html_url'] . '#readme', // Link to GitHub readme for now
+        'download' => $repo['html_url'] . '/archive/refs/heads/' . $repo['default_branch'] . '.zip', 
+        'readme' => '/plugins/' . $repo['name'], // Link to local mirrored doc
         'updated_at' => $repo['updated_at']
     ];
     
@@ -100,4 +100,54 @@ foreach ($repos as $repo) {
 $json = json_encode($plugins, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 file_put_contents($outputFile, $json);
 
-echo "Done! Generated " . count($plugins) . " plugins.\n";
+echo "Done! Generated " . count($plugins) . " plugins in JSON.\n";
+
+// 5. Generate Documentation Pages (Mirroring)
+echo "Starting Documentation Mirroring...\n";
+$docsDir = __DIR__ . '/../plugins'; // Target directory
+
+foreach ($plugins as $plugin) {
+    echo "Mirroring docs for: " . $plugin['name'] . "\n";
+    
+    // Fetch README
+    $readmeUrl = "https://raw.githubusercontent.com/$orgName/{$plugin['id']}/{$repo['default_branch']}/README.md";
+    $readmeContent = fetchUrl($readmeUrl, $githubToken);
+    
+    if (!$readmeContent) {
+        // Try master/main if default branch fetch failed
+        $readmeContent = fetchUrl("https://raw.githubusercontent.com/$orgName/{$plugin['id']}/main/README.md", $githubToken);
+    }
+
+    if ($readmeContent) {
+        // Sanitize & Prepend Frontmatter
+        $title = $plugin['name'];
+        $desc = $plugin['description'];
+        
+        // Remove the first # H1 if it matches the title (or any H1) to avoid duplication
+        // This removes the first line if it starts with #
+        $readmeContent = preg_replace('/^#\s+.+\n/', '', $readmeContent, 1);
+        $readmeContent = trim($readmeContent);
+
+        $mdContent = <<<EOT
+---
+layout: doc
+title: "$title"
+description: "$desc"
+---
+
+# $title
+
+$readmeContent
+
+---
+*This documentation is automatically mirrored from the [source repository]({$plugin['repo']}).*
+EOT;
+        
+        // Save to plugins/[id].md
+        file_put_contents("$docsDir/{$plugin['id']}.md", $mdContent);
+        echo "  + Created: plugins/{$plugin['id']}.md\n";
+    } else {
+        echo "  - Warning: README not found for {$plugin['id']}\n";
+    }
+}
+
