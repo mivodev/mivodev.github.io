@@ -1,12 +1,17 @@
 [
     {
         "id": "plugin-mivo-theme",
-        "name": null,
-        "description": "",
-        "author": "mivodev",
-        "version": "v1.0.0",
-        "category": "Uncategorized",
-        "tags": [],
+        "name": "Mivo Theme Downloader",
+        "description": "Allows downloading the Captive Portal theme with auto-configuration.",
+        "author": "DyzulkDev",
+        "version": "1.0.0",
+        "category": "Hotspot Tools",
+        "tags": [
+            "theme",
+            "downloader",
+            "hotspot",
+            "captive-portal"
+        ],
         "repo": "https://github.com/mivodev/plugin-mivo-theme",
         "download": "https://github.com/mivodev/plugin-mivo-theme/releases/download/v1.0.0/plugin-mivo-theme.zip",
         "readme": "/plugins/plugin-mivo-theme",
