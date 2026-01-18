@@ -7,7 +7,7 @@ Global settings control your MIVO instance across all sessions. These are system
 Access these settings from the top-right menu or the main sidebar.
 
 - **[Routers](/docs/manual/settings/routers)**: Manage your Mikrotik connections.
-- **[Templates](/docs/manual/settings/templates)**: Customize voucher designs.
+- **[Voucher Templates](/docs/manual/settings/voucher-templates)**: Customize voucher designs.
 - **[Logos](/docs/manual/settings/logos)**: Upload brand logos.
 - **[API & CORS](/docs/manual/settings/api-cors)**: Configure API access.
 

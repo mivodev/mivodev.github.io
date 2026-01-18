@@ -7,7 +7,7 @@ Pengaturan global mengontrol instance MIVO Anda secara sistem lunak. Ini adalah 
 Akses pengaturan ini dari menu kanan atas atau sidebar utama.
 
 - **[Router](/id/docs/manual/settings/routers)**: Kelola koneksi Mikrotik Anda.
-- **[Template](/id/docs/manual/settings/templates)**: Kustomisasi desain voucher.
+- **[Template Voucher](/id/docs/manual/settings/voucher-templates)**: Kustomisasi desain voucher.
 - **[Logo](/id/docs/manual/settings/logos)**: Unggah logo brand.
 - **[API & CORS](/id/docs/manual/settings/api-cors)**: Konfigurasi akses API.
 
