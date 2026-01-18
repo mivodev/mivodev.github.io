@@ -1,5 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import MarkdownIt from 'markdown-it'
+import Modal from './Modal.vue'
 
 const props = defineProps({
     title: { type: String, default: 'Plugin Registry' },
@@ -10,6 +12,33 @@ const plugins = ref([])
 const loading = ref(true)
 const searchQuery = ref('')
 const activeCategory = ref('All')
+
+// Docs Modal Logic
+const showModal = ref(false)
+const modalTitle = ref('')
+const modalContent = ref('')
+const loadingDocs = ref(false)
+const md = new MarkdownIt({ html: true, linkify: true })
+
+const fetchDocs = async (plugin) => {
+    modalTitle.value = plugin.name
+    modalContent.value = ''
+    showModal.value = true
+    loadingDocs.value = true
+    
+    try {
+        const res = await fetch(plugin.readme)
+        if (!res.ok) throw new Error('Failed to load README')
+        const text = await res.text()
+        // Simple sanitization or just render
+        modalContent.value = md.render(text)
+    } catch (e) {
+        modalContent.value = `<p class="text-error">Failed to load documentation: ${e.message}</p>
+        <p><a href="${plugin.repo}" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>`
+    } finally {
+        loadingDocs.value = false
+    }
+}
 
 // Fetch data
 const fetchPlugins = async () => {
@@ -75,6 +104,16 @@ function copyToClipboard(text) {
             <p class="page-description">{{ description }}</p>
         </div>
 
+        <!-- Docs Modal -->
+        <Modal :show="showModal" :title="modalTitle" @close="showModal = false">
+            <template #body>
+                <div v-if="loadingDocs" class="flex justify-center p-8">
+                    <div class="spinner"></div>
+                </div>
+                <div v-else class="markdown-body vp-doc" v-html="modalContent"></div>
+            </template>
+        </Modal>
+
         <div class="plugin-registry space-y-8">
             <!-- Search & Filter Controls -->
             <div class="controls-wrapper glass-panel">
@@ -138,7 +177,7 @@ function copyToClipboard(text) {
                     </div>
 
                     <div class="card-footer">
-                        <a :href="plugin.readme" target="_blank" class="VPButton alt action-btn">Docs</a>
+                        <button @click="fetchDocs(plugin)" class="VPButton alt action-btn">Docs</button>
                         <a :href="plugin.download" class="VPButton brand action-btn">Download</a>
                     </div>
                 </div>

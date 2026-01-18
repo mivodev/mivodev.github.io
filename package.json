@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "flag-icons": "^7.5.0",
-        "lucide-vue-next": "^0.562.0"
+        "lucide-vue-next": "^0.562.0",
+        "markdown-it": "^14.1.0"
     }
 }
