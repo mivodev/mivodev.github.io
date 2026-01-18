@@ -1,0 +1,30 @@
+{
+    "name": "mivo-docs",
+    "version": "1.0.0",
+    "description": "Documentation for MIVO",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "dev": "vitepress dev docs",
+        "build": "vitepress build docs",
+        "preview": "vitepress preview docs"
+    },
+    "keywords": [
+        "mivo",
+        "documentation",
+        "vitepress"
+    ],
+    "author": "MivoDev",
+    "license": "MIT",
+    "devDependencies": {
+        "autoprefixer": "^10.4.23",
+        "postcss": "^8.5.6",
+        "tailwindcss": "^3.4.17",
+        "vitepress": "^1.0.0",
+        "vue": "^3.4.0"
+    },
+    "dependencies": {
+        "flag-icons": "^7.5.0",
+        "lucide-vue-next": "^0.562.0"
+    }
+}
