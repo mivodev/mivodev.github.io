@@ -101,7 +101,7 @@ function copyToClipboard(text) {
                     <div class="card-body">
                         <div class="card-header">
                             <div class="plugin-icon-wrapper">
-                                <span class="plugin-initial">{{ plugin.name.charAt(0) }}</span>
+                                <span class="plugin-initial">{{ plugin.name ? plugin.name.charAt(0) : '?' }}</span>
                             </div>
                             <div class="plugin-title-block">
                                 <h3 class="plugin-title group-hover:text-brand transition-colors">{{ plugin.name }}</h3>
