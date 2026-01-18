@@ -31,4 +31,4 @@ Di halaman **Pengaturan > Plugins**, Anda bisa melihat daftar ekstensi yang terp
   - **Hapus**: Menghapus plugin dan filenya secara permanen.
 
 ## Membuat Plugin
-Pengembang (Developer) dapat membuat plugin kustom untuk fitur seperti tema hotspot baru, gateway pembayaran, atau tool sistem. Cek [Panduan Kontribusi](/id/docs/guide/contribution) untuk detailnya.
+Pengembang (Developer) dapat membuat plugin kustom untuk fitur seperti tema hotspot baru, gateway pembayaran, atau tool sistem. Cek [Panduan Kontribusi](https://github.com/dyzulk/mivo/blob/main/CONTRIBUTING.md) untuk detailnya.

@@ -31,4 +31,4 @@ In the **Settings > Plugins** table, you can see all installed extensions.
   - **Delete**: Removes the plugin and its files permanently.
 
 ## Creating Plugins
-Developers can create custom plugins to add features like new Hotspot themes, payment gateways, or system tools. Check the [Contribution Guide](/docs/guide/contribution) for details.
+Developers can create custom plugins to add features like new Hotspot themes, payment gateways, or system tools. Check the [Contribution Guide](https://github.com/dyzulk/mivo/blob/main/CONTRIBUTING.md) for details.
