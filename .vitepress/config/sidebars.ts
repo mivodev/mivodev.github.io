@@ -8,7 +8,9 @@ export const sidebarEn: DefaultTheme.Sidebar = {
       text: 'Getting Started',
       collapsed: false,
       items: [
-        { text: 'Introduction', link: '/docs/guide/' },
+        { text: 'Plugins', link: '/plugins/' },
+        { text: 'Release Archive', link: '/releases/' },
+        { text: 'Team', link: '/team' },
         { text: 'Requirements', link: '/docs/guide/installation#requirements' }
       ]
     },
