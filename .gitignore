@@ -1,8 +1,10 @@
 node_modules
 .DS_Store
-dist
-dist-ssr
-cache
+Thumbs.db
 .idea
 .vscode
 *.log
+.vitepress/dist
+.vitepress/cache
+.vitepress/dist-ssr
+*.local
