@@ -33,9 +33,13 @@ const categories = computed(() => {
 // Filter Logic
 const filteredPlugins = computed(() => {
     return plugins.value.filter(p => {
-        const matchesSearch = p.name.toLowerCase().includes(searchQuery.value.toLowerCase()) || 
-                            p.description.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
-                            (p.tags && p.tags.some(t => t.toLowerCase().includes(searchQuery.value.toLowerCase())))
+        const name = p.name || ''
+        const desc = p.description || ''
+        const query = searchQuery.value.toLowerCase()
+
+        const matchesSearch = name.toLowerCase().includes(query) || 
+                              desc.toLowerCase().includes(query) ||
+                              (p.tags && p.tags.some(t => t && t.toLowerCase().includes(query)))
         
         const matchesCategory = activeCategory.value === 'All' || p.category === activeCategory.value
 
