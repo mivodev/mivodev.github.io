@@ -59,7 +59,7 @@ export const sidebarEn: DefaultTheme.Sidebar = {
         { text: 'Introduction', link: '/docs/manual/settings/' },
         { text: 'Plugins', link: '/docs/manual/settings/plugins' },
         { text: 'Routers', link: '/docs/manual/settings/routers' },
-        { text: 'Templates', link: '/docs/manual/settings/templates' },
+        { text: 'Voucher Templates', link: '/docs/manual/settings/templates' },
         { text: 'Logos', link: '/docs/manual/settings/logos' },
         { text: 'API & CORS', link: '/docs/manual/settings/api-cors' },
         { text: 'System', link: '/docs/manual/settings/system' }
