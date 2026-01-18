@@ -6,7 +6,12 @@ MIVO memiliki engine template yang mumpuni untuk membuat voucher yang cantik dan
 
 Template menggunakan HTML dan placeholder khusus untuk menampilkan data voucher.
 
-- **Variabel**: `{{username}}`, `{{password}}`, `{{price}}`, dll.
+- **Variabel**:
+  - **Kredensial**: `\{\{username\}\}`, `\{\{password\}\}`
+  - **Server**: `\{\{server_name\}\}`, `\{\{dns_name\}\}`
+  - **Paket**: `\{\{profile\}\}`, `\{\{price\}\}`, `\{\{validity\}\}`, `\{\{time_limit\}\}`, `\{\{data_limit\}\}`
+  - **Jaringan**: `\{\{ip_address\}\}`, `\{\{mac_address\}\}`
+  - **Ekstra**: `\{\{comment\}\}`, `\{\{copyright\}\}`, `\{\{qrcode\}\}` (mendukung opsi seperti `size=100 fg=red`)
 - **Preview**: Uji template Anda secara instan dari editor.
 
 ## <Icon name="Printer" color="info" /> Cetak Cepat
