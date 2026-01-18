@@ -8,6 +8,8 @@ Template menggunakan HTML dan placeholder khusus untuk menampilkan data voucher.
 
 ### Variabel yang Didukung
 
+| Variabel | Deskripsi |
+| :--- | :--- |
 | <code v-pre>{{username}}</code> | Username login pengguna |
 | <code v-pre>{{password}}</code> | Password login pengguna |
 | <code v-pre>{{server_name}}</code> | Nama server hotspot |

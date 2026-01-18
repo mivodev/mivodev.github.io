@@ -8,6 +8,8 @@ Templates use HTML and specialized placeholders to display voucher data.
 
 ### Supported Variables
 
+| Variable | Description |
+| :--- | :--- |
 | <code v-pre>{{username}}</code> | User's login username |
 | <code v-pre>{{password}}</code> | User's login password |
 | <code v-pre>{{server_name}}</code> | Hotspot server name |
