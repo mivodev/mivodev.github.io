@@ -12,15 +12,29 @@ const searchQuery = ref('')
 const activeCategory = ref('All')
 
 // Fetch data
-onMounted(async () => {
+const fetchPlugins = async () => {
+    loading.value = true
     try {
-        const res = await fetch('/plugins.json')
-        plugins.value = await res.json()
+        // Fetch from the external registry repository
+        const response = await fetch('https://mivodev.github.io/registry/plugins.json')
+        if (!response.ok) throw new Error('Failed to fetch plugins')
+        plugins.value = await response.json()
     } catch (e) {
-        console.error("Failed to load plugins", e)
+        console.error(e)
+        // Fallback for local dev or if registry is down
+        try {
+            const localRes = await fetch('/plugins.json')
+            if (localRes.ok) plugins.value = await localRes.json()
+        } catch (err) {
+            console.error('Local fallback failed', err)
+        }
     } finally {
         loading.value = false
     }
+}
+
+onMounted(async () => {
+    fetchPlugins()
 })
 
 // Categories

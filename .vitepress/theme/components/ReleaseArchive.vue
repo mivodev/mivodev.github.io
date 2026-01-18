@@ -15,7 +15,7 @@ const formatSize = (bytes) => {
 
 onMounted(async () => {
     try {
-        const res = await fetch('/releases.json')
+        const res = await fetch('https://mivodev.github.io/registry/releases.json')
         if (!res.ok) throw new Error('Failed to load releases')
         releases.value = await res.json()
     } catch (e) {
