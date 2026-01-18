@@ -51,6 +51,7 @@ export const sidebarEn: DefaultTheme.Sidebar = {
       text: 'Global Settings',
       items: [
         { text: 'Introduction', link: '/docs/manual/settings/' },
+        { text: 'Plugins', link: '/docs/manual/settings/plugins' },
         { text: 'Routers', link: '/docs/manual/settings/routers' },
         { text: 'Templates', link: '/docs/manual/settings/templates' },
         { text: 'Logos', link: '/docs/manual/settings/logos' },
@@ -124,6 +125,7 @@ export const sidebarId: DefaultTheme.Sidebar = {
       text: 'Pengaturan Global',
       items: [
         { text: 'Pendahuluan', link: '/id/docs/manual/settings/' },
+        { text: 'Plugins', link: '/id/docs/manual/settings/plugins' },
         { text: 'Router', link: '/id/docs/manual/settings/routers' },
         { text: 'Template', link: '/id/docs/manual/settings/templates' },
         { text: 'Logo', link: '/id/docs/manual/settings/logos' },
