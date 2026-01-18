@@ -18,3 +18,4 @@ Sesuaikan pengaturan lingkungan untuk seluruh aplikasi:
 ## <Icon name="ShieldAlert" color="warning" /> Keamanan
 
 MIVO menggunakan autentikasi berbasis sesi. Pastikan Anda melakukan logout saat menggunakan terminal publik.
+

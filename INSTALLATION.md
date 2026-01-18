@@ -134,3 +134,4 @@ After setting up the server:
         Run `php mivo install` in your terminal.
     *   **Option B: Web Installer**
         Open `http://your-domain.com/install` in your browser.
+

@@ -27,3 +27,4 @@ Anda dapat menghapus logo yang tidak digunakan kapan saja.
 > [!WARNING]
 > Menghapus logo akan menyebabkan template voucher yang mereferensikan ID-nya menampilkan gambar yang rusak (placeholder).
 
+

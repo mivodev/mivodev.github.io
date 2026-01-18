@@ -135,3 +135,4 @@ After setting up the server:
     *   **Option B: Web Installer**
         Open `http://your-domain.com/install` in your browser.
 
+

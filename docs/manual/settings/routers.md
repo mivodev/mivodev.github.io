@@ -26,3 +26,4 @@ Protect your configuration by creating backups of your MIVO database.
 > [!CAUTION]
 > Restoring a backup will overwrite your current settings and sessions.
 
+

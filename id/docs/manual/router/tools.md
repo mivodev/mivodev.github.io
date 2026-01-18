@@ -24,3 +24,4 @@ Picukan perintah tingkat sistem secara langsung dari antarmuka MIVO:
 > [!WARNING]
 > Tindakan ini segera dieksekusi pada router Mikrotik Anda. Pastikan tidak ada operasi kritis yang sedang berjalan sebelum melakukan reboot.
 
+

@@ -27,3 +27,4 @@ You can delete unused logos at any time.
 > [!WARNING]
 > Deleting a logo will cause any voucher templates referencing its ID to show a broken image placeholder.
 
+

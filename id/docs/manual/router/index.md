@@ -6,11 +6,12 @@ Operasional router adalah tugas-tugas spesifik dalam sesi setelah terhubung ke p
 
 Setelah Anda memilih sesi dari sidebar, Anda mendapatkan akses ke alat-alat berikut:
 
-- **[Dashboard](/id/manual/router/dashboard)**: Pemantauan traffic secara real-time.
-- **[Manajemen Hotspot](/id/manual/router/hotspot)**: User, Profil, dan Voucher.
-- **[Laporan](/id/manual/router/reports)**: Laporan penjualan dan log sistem.
-- **[Tools Sistem](/id/manual/router/tools)**: Reboot, Scheduler, dan DHCP.
+- **[Dashboard](/id/docs/manual/router/dashboard)**: Pemantauan traffic secara real-time.
+- **[Manajemen Hotspot](/id/docs/manual/router/hotspot)**: User, Profil, dan Voucher.
+- **[Laporan](/id/docs/manual/router/reports)**: Laporan penjualan dan log sistem.
+- **[Tools Sistem](/id/docs/manual/router/tools)**: Reboot, Scheduler, dan DHCP.
 
 ## <Icon name="Zap" color="warning" /> Sinkronisasi Real-time
 
 MIVO berkomunikasi langsung dengan API Mikrotik Anda. Sebagian besar perubahan akan langsung diterapkan pada perangkat Anda.
+

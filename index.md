@@ -38,3 +38,4 @@ MIVO is a next-generation **Mikrotik Voucher Management System**, engineered to 
 - <Icon name="Smartphone" color="info" /> **Mobile First**: Fully responsive design that feels like a native app.
 - <Icon name="Plug" color="success" /> **API First**: Built-in REST API with CORS support for 3rd party integrations.
 - <Icon name="Wrench" color="primary" /> **Developer Friendly**: Clean architecture, CLI tools (`php mivo`), and easy extension.
+

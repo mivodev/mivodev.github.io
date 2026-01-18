@@ -102,3 +102,4 @@ To access MIVO via a domain (e.g., `mivo.yourdomain.com`):
 4. After creation, open the site settings > **Reverse Proxy** > **Add Reverse Proxy**.
 5. **Target URL**: `http://127.0.0.1:8085` (Replace `8085` with your `APP_PORT`).
 6. Save and secure with SSL.
+

@@ -38,3 +38,4 @@ Advanced settings for network access without typical voucher requirements.
 - **IP Bindings**: Bypass the hotspot login for specific MAC or IP addresses (e.g., for office printers or servers).
 - **Walled Garden**: Allow access to specific websites or domains (e.g., your bank's portal) even before users log in.
 
+

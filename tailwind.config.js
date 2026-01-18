@@ -2,7 +2,9 @@
 export default {
   content: [
     "./docs/**/*.{md,vue,js,ts}",
-    "./docs/.vitepress/**/*.{md,vue,js,ts}"
+    "./id/**/*.{md,vue,js,ts}",
+    "./.vitepress/**/*.{md,vue,js,ts}",
+    "./*.md"
   ],
   darkMode: 'class',
   theme: {

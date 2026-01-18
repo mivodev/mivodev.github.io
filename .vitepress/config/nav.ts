@@ -2,8 +2,8 @@ import { DefaultTheme } from 'vitepress'
 
 export const navEn: DefaultTheme.NavItem[] = [
   { text: 'Home', link: '/' },
-  { text: 'Guide', link: '/guide/installation' },
-  { text: 'Manual', link: '/manual/' },
+  { text: 'Guide', link: '/docs/guide/installation' },
+  { text: 'Manual', link: '/docs/manual/' },
   { 
     text: 'Community', 
     items: [
@@ -17,8 +17,8 @@ export const navEn: DefaultTheme.NavItem[] = [
 
 export const navId: DefaultTheme.NavItem[] = [
   { text: 'Beranda', link: '/id/' },
-  { text: 'Panduan', link: '/id/guide/installation' },
-  { text: 'Buku Manual', link: '/id/manual/' },
+  { text: 'Panduan', link: '/id/docs/guide/installation' },
+  { text: 'Buku Manual', link: '/id/docs/manual/' },
   { 
     text: 'Komunitas', 
     items: [

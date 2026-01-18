@@ -38,3 +38,4 @@ MIVO adalah **Sistem Manajemen Voucher Mikrotik** generasi baru, dirancang untuk
 - <Icon name="Smartphone" color="info" /> **Mobile First**: Desain responsif sepenuhnya yang terasa seperti aplikasi native.
 - <Icon name="Plug" color="success" /> **API First**: REST API bawaan dengan dukungan CORS untuk integrasi pihak ketiga.
 - <Icon name="Wrench" color="primary" /> **Ramah Developer**: Arsitektur bersih, CLI tools (`php mivo`), dan mudah dikembangkan.
+

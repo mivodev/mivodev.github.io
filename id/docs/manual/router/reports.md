@@ -26,3 +26,4 @@ Pantau peristiwa real-time dari router Mikrotik Anda (`/reports/user-log`).
 > [!NOTE]
 > MIVO mengambil log ini langsung dari circular buffer Mikrotik. Bersihkan log Anda pada terminal Mikrotik jika buffer menjadi terlalu besar.
 
+

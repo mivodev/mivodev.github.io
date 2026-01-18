@@ -18,3 +18,4 @@ Adjust the environment settings for the entire application:
 ## <Icon name="ShieldAlert" color="warning" /> Security
 
 MIVO uses session-based authentication. Ensure you log out when using public terminals.
+

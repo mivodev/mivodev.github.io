@@ -38,3 +38,4 @@ Pengaturan lanjutan untuk akses jaringan tanpa persyaratan voucher biasa.
 - **IP Bindings**: Lewati login hotspot untuk alamat MAC atau IP tertentu (contoh: untuk printer kantor atau server).
 - **Walled Garden**: Izinkan akses ke situs web atau domain tertentu (contoh: portal bank Anda) bahkan sebelum user login.
 
+

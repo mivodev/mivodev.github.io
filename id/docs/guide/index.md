@@ -14,10 +14,11 @@ MIVO adalah sistem Manajemen Voucher Mikrotik yang modern dan ringan. Sistem ini
 
 Jelajahi bagian berikut untuk memulai:
 
-- **[Panduan Instalasi](/id/guide/installation)**: Pelajari cara menginstal MIVO di berbagai platform.
-- **[Panduan Docker](/id/guide/docker)**: Cara yang direkomendasikan untuk menjalankan MIVO menggunakan container.
-- **[Buku Manual](/id/manual/)**: Instruksi detail tentang cara menggunakan fitur-fitur MIVO.
+- **[Panduan Instalasi](/id/docs/guide/installation)**: Pelajari cara menginstal MIVO di berbagai platform.
+- **[Panduan Docker](/id/docs/guide/docker)**: Cara yang direkomendasikan untuk menjalankan MIVO menggunakan container.
+- **[Buku Manual](/id/docs/manual/)**: Instruksi detail tentang cara menggunakan fitur-fitur MIVO.
 
 ## <Icon name="Heart" color="danger" /> Dukungan
 
 MIVO adalah proyek open-source. Jika Anda merasa MIVO bermanfaat, harap pertimbangkan untuk mendukung pengembangannya melalui [donasi](https://sociabuzz.com/dyzulkdev/tribe) atau [berkontribusi](https://github.com/dyzulk/mivo) langsung ke kode program.
+

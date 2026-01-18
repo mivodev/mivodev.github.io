@@ -13,3 +13,4 @@ To allow your website (e.g., a status checker) to call the MIVO API, you must wh
 ## <Icon name="Terminal" color="info" /> Documentation
 
 Detailed API documentation is available in the developers section.
+

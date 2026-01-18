@@ -25,3 +25,4 @@ Menghapus paket di sini hanya menghapusnya dari dashboard Quick Print; **tidak**
 2. **MIVO** membuat akun username/password acak di Mikrotik.
 3. **MIVO** mengambil template yang ditentukan dan mengirimkannya ke engine cetak browser.
 
+

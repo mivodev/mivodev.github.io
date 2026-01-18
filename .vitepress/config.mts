@@ -9,7 +9,7 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   sitemap: {
-    hostname: 'https://docs.mivo.dyzulk.com'
+    hostname: 'https://mivodev.github.io'
   },
   
   head: [
@@ -17,16 +17,16 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#0ea5e9' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'MIVO' }],
-    ['meta', { property: 'og:image', content: 'https://docs.mivo.dyzulk.com/og-image.png' }],
+    ['meta', { property: 'og:image', content: 'https://mivodev.github.io/og-image.png' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:image', content: 'https://docs.mivo.dyzulk.com/og-image.png' }],
+    ['meta', { name: 'twitter:image', content: 'https://mivodev.github.io/og-image.png' }],
     ['meta', { name: 'twitter:site', content: '@dyzulkdev' }]
   ],
 
   transformHead: ({ pageData }) => {
     const title = pageData.title ? `${pageData.title} | MIVO` : 'MIVO'
     const description = pageData.description || "Modern Mikrotik Voucher Management System"
-    const url = `https://docs.mivo.dyzulk.com/${pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2')}`
+    const url = `https://mivodev.github.io/${pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2')}`
 
     return [
       ['meta', { property: 'og:title', content: title }],

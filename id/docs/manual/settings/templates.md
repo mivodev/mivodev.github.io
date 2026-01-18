@@ -12,3 +12,4 @@ Template menggunakan HTML dan placeholder khusus untuk menampilkan data voucher.
 ## <Icon name="Printer" color="info" /> Cetak Cepat
 
 Setelah template disimpan, template tersebut akan tersedia di menu **Cetak Cepat** (Quick Print) di dalam sesi router Anda.
+

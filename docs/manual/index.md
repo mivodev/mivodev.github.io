@@ -8,14 +8,14 @@ Welcome to the **MIVO User Manual**. This section covers the functional aspects 
 
 ## <Icon name="BookOpen" color="primary" /> Topics
 
-### <Icon name="Settings" color="info" /> [Global Settings](/manual/settings/)
+### <Icon name="Settings" color="info" /> [Global Settings](/docs/manual/settings/)
 Configure your system-wide settings:
 - **Managing Routers**: Connect and manage your Mikrotik devices.
 - **Voucher Templates**: Design and customize your voucher layouts.
 - **Brand Logos**: Upload custom logos for your hotspot.
 - **API & CORS**: Securely expose your router data to 3rd party apps.
 
-### <Icon name="Activity" color="success" /> [Router Operations](/manual/router/)
+### <Icon name="Activity" color="success" /> [Router Operations](/docs/manual/router/)
 Manage your everyday router tasks after connecting:
 - **Dashboard**: Monitor real-time traffic and system health.
 - **Hotspot Management**: Create users, profiles, and generate vouchers.
@@ -25,5 +25,6 @@ Manage your everyday router tasks after connecting:
 ---
 
 > [!TIP]
-> This manual focuses on **using** the application. For installation and server configuration, please refer to the [Guide](/guide/installation).
+> This manual focuses on **using** the application. For installation and server configuration, please refer to the [Guide](/docs/guide/installation).
+
 

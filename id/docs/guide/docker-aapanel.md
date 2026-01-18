@@ -102,3 +102,4 @@ Agar MIVO bisa diakses menggunakan domain (contoh: `mivo.domainanda.com`):
 4. Setelah site dibuat, buka settingannya > **Reverse Proxy** > **Add Reverse Proxy**.
 5. **Target URL**: `http://127.0.0.1:8085` (Ganti `8085` sesuai dengan `APP_PORT` Anda).
 6. Simpan dan aktifkan SSL agar lebih aman.
+
