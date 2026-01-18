@@ -64,8 +64,21 @@ foreach ($repos as $repo) {
     }
 
     // 4. Parse Metadata
-    // ...
-    // (Parsing login remains the same)
+    // Regex looking for: * Key: Value
+    preg_match_all('/^\s*\*\s*([a-zA-Z0-9 ]+):\s*(.+)$/m', $pluginContent, $matches, PREG_SET_ORDER);
+    
+    $metadata = [];
+    foreach ($matches as $match) {
+        $key = strtolower(trim($match[1]));
+        $value = trim($match[2]);
+        $metadata[$key] = $value;
+    }
+
+    // fallback if name is missing
+    if (empty($metadata['plugin name'])) {
+         echo "  - Warning: 'Plugin Name' header missing. Skipping.\n";
+         continue;
+    }
     
     // Determine Download URL & Version
     $downloadUrl = $repo['html_url'] . '/archive/refs/heads/' . $repo['default_branch'] . '.zip';
