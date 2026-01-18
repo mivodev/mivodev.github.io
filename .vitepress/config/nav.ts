@@ -5,6 +5,7 @@ export const navEn: DefaultTheme.NavItem[] = [
   { text: 'Guide', link: '/docs/guide/installation' },
   { text: 'Manual', link: '/docs/manual/' },
   { text: 'Plugins', link: '/plugins/' },
+  { text: 'Releases', link: '/releases/' },
   { 
     text: 'Community', 
     items: [
@@ -20,7 +21,8 @@ export const navId: DefaultTheme.NavItem[] = [
   { text: 'Beranda', link: '/id/' },
   { text: 'Panduan', link: '/id/docs/guide/installation' },
   { text: 'Buku Manual', link: '/id/docs/manual/' },
-  { text: 'Plugin', link: '/plugins/' },
+  { text: 'Plugin', link: '/id/plugins/' },
+  { text: 'Rilis', link: '/id/releases/' },
   { 
     text: 'Komunitas', 
     items: [

@@ -9,7 +9,6 @@ export const sidebarEn: DefaultTheme.Sidebar = {
       collapsed: false,
       items: [
         { text: 'Plugins', link: '/plugins/' },
-        { text: 'Release Archive', link: '/releases/' },
         { text: 'Team', link: '/team' },
         { text: 'Requirements', link: '/docs/guide/installation#requirements' }
       ]
