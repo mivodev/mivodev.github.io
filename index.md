@@ -14,8 +14,8 @@ hero:
       text: Get Started
       link: /guide/installation
     - theme: alt
-      text: Docker Image
-      link: /guide/docker
+      text: Download
+      link: /releases/
 
 features:
   - title: Lightweight Core

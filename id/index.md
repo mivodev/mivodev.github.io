@@ -14,8 +14,8 @@ hero:
       text: Mulai Sekarang
       link: /id/guide/installation
     - theme: alt
-      text: Docker Image
-      link: /id/guide/docker
+      text: Unduh
+      link: /id/releases/
 
 features:
   - title: Core Ringan
