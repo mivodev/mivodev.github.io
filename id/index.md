@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Mulai Sekarang
-      link: /id/guide/installation
+      link: /id/docs/guide/installation
     - theme: alt
       text: Unduh
       link: /id/releases/
