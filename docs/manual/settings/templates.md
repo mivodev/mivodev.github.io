@@ -8,23 +8,23 @@ Templates use HTML and specialized placeholders to display voucher data.
 
 ### Supported Variables
 
-| `{{username}}` | User's login username |
-| `{{password}}` | User's login password |
-| `{{server_name}}` | Hotspot server name |
-| `{{dns_name}}` | DNS name for login (e.g., `hotspot.lan`) |
-| `{{profile}}` | User profile/package name |
-| `{{price}}` | Plan price (formatted) |
-| `{{validity}}` | Validity duration |
-| `{{time_limit}}` | Time limit session |
-| `{{data_limit}}` | Data quota limit |
-| `{{ip_address}}` | User's IP address |
-| `{{mac_address}}` | User's MAC address |
-| `{{comment}}` | User comment |
-| `{{copyright}}` | Copyright text |
-| `{{qrcode}}` | Generates a QR Code for login URL |
+| `&#123;&#123;username&#125;&#125;` | User's login username |
+| `&#123;&#123;password&#125;&#125;` | User's login password |
+| `&#123;&#123;server_name&#125;&#125;` | Hotspot server name |
+| `&#123;&#123;dns_name&#125;&#125;` | DNS name for login (e.g., `hotspot.lan`) |
+| `&#123;&#123;profile&#125;&#125;` | User profile/package name |
+| `&#123;&#123;price&#125;&#125;` | Plan price (formatted) |
+| `&#123;&#123;validity&#125;&#125;` | Validity duration |
+| `&#123;&#123;time_limit&#125;&#125;` | Time limit session |
+| `&#123;&#123;data_limit&#125;&#125;` | Data quota limit |
+| `&#123;&#123;ip_address&#125;&#125;` | User's IP address |
+| `&#123;&#123;mac_address&#125;&#125;` | User's MAC address |
+| `&#123;&#123;comment&#125;&#125;` | User comment |
+| `&#123;&#123;copyright&#125;&#125;` | Copyright text |
+| `&#123;&#123;qrcode&#125;&#125;` | Generates a QR Code for login URL |
 
 > [!TIP]
-> The `{{qrcode}}` variable supports custom attributes for styling, for example: `{{qrcode size=100 fg=red}}`.
+> The `&#123;&#123;qrcode&#125;&#125;` variable supports custom attributes for styling, for example: `&#123;&#123;qrcode size=100 fg=red&#125;&#125;`.
 - **Preview**: Test your template instantly from the editor.
 
 ## <Icon name="Printer" color="info" /> Quick Print

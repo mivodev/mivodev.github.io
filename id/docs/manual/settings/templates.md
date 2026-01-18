@@ -8,23 +8,23 @@ Template menggunakan HTML dan placeholder khusus untuk menampilkan data voucher.
 
 ### Variabel yang Didukung
 
-| `{{username}}` | Username login pengguna |
-| `{{password}}` | Password login pengguna |
-| `{{server_name}}` | Nama server hotspot |
-| `{{dns_name}}` | Nama DNS untuk login (cth: `hotspot.lan`) |
-| `{{profile}}` | Nama profil/paket pengguna |
-| `{{price}}` | Harga paket (terformat) |
-| `{{validity}}` | Durasi masa aktif |
-| `{{time_limit}}` | Batas waktu sesi |
-| `{{data_limit}}` | Batas kuota data |
-| `{{ip_address}}` | Alamat IP pengguna |
-| `{{mac_address}}` | Alamat MAC pengguna |
-| `{{comment}}` | Komentar pengguna |
-| `{{copyright}}` | Teks hak cipta |
-| `{{qrcode}}` | Menghasilkan kode QR untuk URL login |
+| `&#123;&#123;username&#125;&#125;` | Username login pengguna |
+| `&#123;&#123;password&#125;&#125;` | Password login pengguna |
+| `&#123;&#123;server_name&#125;&#125;` | Nama server hotspot |
+| `&#123;&#123;dns_name&#125;&#125;` | Nama DNS untuk login (cth: `hotspot.lan`) |
+| `&#123;&#123;profile&#125;&#125;` | Nama profil/paket pengguna |
+| `&#123;&#123;price&#125;&#125;` | Harga paket (terformat) |
+| `&#123;&#123;validity&#125;&#125;` | Durasi masa aktif |
+| `&#123;&#123;time_limit&#125;&#125;` | Batas waktu sesi |
+| `&#123;&#123;data_limit&#125;&#125;` | Batas kuota data |
+| `&#123;&#123;ip_address&#125;&#125;` | Alamat IP pengguna |
+| `&#123;&#123;mac_address&#125;&#125;` | Alamat MAC pengguna |
+| `&#123;&#123;comment&#125;&#125;` | Komentar pengguna |
+| `&#123;&#123;copyright&#125;&#125;` | Teks hak cipta |
+| `&#123;&#123;qrcode&#125;&#125;` | Menghasilkan kode QR untuk URL login |
 
 > [!TIP]
-> Variabel `{{qrcode}}` mendukung atribut kustom untuk gaya, contohnya: `{{qrcode size=100 fg=red}}`.
+> Variabel `&#123;&#123;qrcode&#125;&#125;` mendukung atribut kustom untuk gaya, contohnya: `&#123;&#123;qrcode size=100 fg=red&#125;&#125;`.
 - **Preview**: Uji template Anda secara instan dari editor.
 
 ## <Icon name="Printer" color="info" /> Cetak Cepat
