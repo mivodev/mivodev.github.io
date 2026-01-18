@@ -36,6 +36,12 @@ export const sidebarEn: DefaultTheme.Sidebar = {
         { text: 'Contribution', link: 'https://github.com/dyzulk/mivo/blob/main/CONTRIBUTING.md' },
         { text: 'Donate', link: 'https://sociabuzz.com/dyzulkdev/tribe' }
       ]
+    },
+    {
+      text: 'Development',
+      items: [
+        { text: 'Creating Plugins', link: '/docs/guide/plugin-development' }
+      ]
     }
   ],
 
@@ -108,6 +114,12 @@ export const sidebarId: DefaultTheme.Sidebar = {
       items: [
         { text: 'Kontribusi', link: 'https://github.com/dyzulk/mivo/blob/main/CONTRIBUTING.md' },
         { text: 'Donasi', link: 'https://sociabuzz.com/dyzulkdev/tribe' }
+      ]
+    },
+    {
+      text: 'Pengembangan',
+      items: [
+        { text: 'Membuat Plugin', link: '/id/docs/guide/plugin-development' }
       ]
     }
   ],
