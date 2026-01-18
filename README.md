@@ -31,4 +31,4 @@ We welcome contributions! Please see our [Contributing Guide](https://github.com
 
 ## License
 
-Code released under the [MIT License](LICENSE).
+Code released under the [MIT License](https://github.com/mivodev/mivodev.github.io/blob/main/LICENSE).
