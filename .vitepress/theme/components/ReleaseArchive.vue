@@ -46,6 +46,7 @@ onMounted(async () => {
                     <tr v-for="release in releases" :key="release.version" class="border-b border-accents-2 hover:bg-accents-1 transition-colors">
                         <td class="py-3 px-4">
                             <span class="font-mono font-bold">{{ release.version }}</span>
+                            <span v-if="release.latest" class="ml-2 text-xs bg-brand text-white px-2 py-0.5 rounded-full">Latest</span>
                             <span v-if="release.prerelease" class="ml-2 text-xs bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-full">Pre-release</span>
                         </td>
                         <td class="py-3 px-4 text-sm text-accents-5">{{ release.date }}</td>
