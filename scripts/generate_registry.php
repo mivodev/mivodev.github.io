@@ -122,7 +122,7 @@ foreach ($repos as $repo) {
 }
 
 // 4. Save to JSON
-$json = json_encode($plugins, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+$json = json_encode($plugins, JSON_UNESCAPED_SLASHES);
 file_put_contents($outputFile, $json);
 
 echo "Done! Generated " . count($plugins) . " plugins in JSON.\n";
