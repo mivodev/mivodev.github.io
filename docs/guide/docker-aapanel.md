@@ -46,7 +46,7 @@ version: '3.8'
 
 services:
   mivo:
-    image: ghcr.io/mivodev/mivo:${VERSION:-latest}
+    image: mivodev/mivo:${VERSION:-latest}
     container_name: ${CONTAINER_NAME:-mivo}
     restart: unless-stopped
     ports:

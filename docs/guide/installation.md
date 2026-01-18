@@ -13,6 +13,38 @@ This guide covers installation on various platforms. MIVO is designed to be ligh
 
 ---
 
+## <Icon name="Terminal" color="secondary" /> Manual Installation (Linux/VPS) {#manual-linux}
+Recommended for VPS users (Ubuntu/Debian/CentOS) who prefer manual setup over Docker.
+
+### 1. Requirements
+Ensure you have `git`, `unzip`, and `php` installed.
+```bash
+sudo apt update
+sudo apt install git unzip php php-sqlite3 php-openssl php-curl php-mbstring php-json
+```
+
+### 2. Clone Repository
+```bash
+cd /var/www/html
+git clone https://github.com/mivodev/mivo.git
+cd mivo
+```
+
+### 3. Install Dependencies
+You need **Composer**. If not installed, [get it here](https://getcomposer.org/download/).
+```bash
+composer install --no-dev --optimize-autoloader
+```
+
+### 4. Permissions (Important)
+Give the web server write access to the database and config folders.
+```bash
+chown -R www-data:www-data app/Database public app/Config
+chmod -R 775 app/Database public app/Config
+```
+
+---
+
 ## <Icon name="Container" color="info" /> Docker (Recommended)
 The easiest way to run MIVO.
 
