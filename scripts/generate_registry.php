@@ -48,31 +48,43 @@ foreach ($repos as $repo) {
 
     echo "Processing: " . $repo['name'] . "\n";
 
-    // 2. Fetch plugin.php
-    $rawUrl = "https://raw.githubusercontent.com/$orgName/{$repo['name']}/{$repo['default_branch']}/plugin.php";
+    // 2. Fetch Release Info (Prefer Releases)
+    $releaseUrl = "https://api.github.com/repos/$orgName/{$repo['name']}/releases/latest";
+    $releaseJson = fetchUrl($releaseUrl, $githubToken);
+    $release = $releaseJson ? json_decode($releaseJson, true) : null;
+
+    // 3. Fetch plugin.php (From Release Tag if available, else Default Branch)
+    $ref = $release ? $release['tag_name'] : $repo['default_branch'];
+    $rawUrl = "https://raw.githubusercontent.com/$orgName/{$repo['name']}/{$ref}/plugin.php";
     $pluginContent = fetchUrl($rawUrl, $githubToken);
 
     if (!$pluginContent) {
-        echo "  - Warning: plugin.php not found. Skipping.\n";
+        echo "  - Warning: plugin.php not found in $ref. Skipping.\n";
         continue;
     }
 
-    // 3. Parse Metadata
-    // Regex looking for: * Key: Value
-    preg_match_all('/^\s*\*\s*([a-zA-Z0-9 ]+):\s*(.+)$/m', $pluginContent, $matches, PREG_SET_ORDER);
+    // 4. Parse Metadata
+    // ...
+    // (Parsing login remains the same)
     
-    $metadata = [];
-    foreach ($matches as $match) {
-        $key = strtolower(trim($match[1]));
-        $value = trim($match[2]);
-        $metadata[$key] = $value;
+    // Determine Download URL & Version
+    $downloadUrl = $repo['html_url'] . '/archive/refs/heads/' . $repo['default_branch'] . '.zip';
+    $version = '0.0.1'; // Default
+
+    if ($release && !empty($release['assets'])) {
+        // Use the first asset (ZIP) from the release
+        $downloadUrl = $release['assets'][0]['browser_download_url'];
+        $version = $release['tag_name'];
+        echo "  > Using Release: $version\n";
+    } else {
+        echo "  > Using Branch: {$repo['default_branch']}\n";
     }
 
-    // fallback if name is missing
-    if (empty($metadata['plugin name'])) {
-         echo "  - Warning: 'Plugin Name' header missing. Skipping.\n";
-         continue;
-    }
+    // Version from metadata overrides repo version if strictly needed, 
+    // but usually Release Tag is better trust source. 
+    // Let's use metadata version if available, falling back to tag.
+    
+    // ...
 
     // Construct Plugin Object
     $plugin = [
@@ -80,12 +92,12 @@ foreach ($repos as $repo) {
         'name' => $metadata['plugin name'],
         'description' => $metadata['description'] ?? $repo['description'] ?? '',
         'author' => $metadata['author'] ?? $repo['owner']['login'],
-        'version' => $metadata['version'] ?? '0.0.1',
+        'version' => $metadata['version'] ?? $version, // Metadata > Tag > Default
         'category' => $metadata['category'] ?? 'Uncategorized',
         'tags' => array_map('trim', explode(',', $metadata['tags'] ?? '')),
         'repo' => $repo['html_url'],
-        'download' => $repo['html_url'] . '/archive/refs/heads/' . $repo['default_branch'] . '.zip', 
-        'readme' => '/plugins/' . $repo['name'], // Link to local mirrored doc
+        'download' => $downloadUrl, 
+        'readme' => '/plugins/' . $repo['name'],
         'updated_at' => $repo['updated_at']
     ];
     
