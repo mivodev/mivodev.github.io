@@ -6,12 +6,27 @@ MIVO features a powerful template engine to create beautiful, printable vouchers
 
 Templates use HTML and specialized placeholders to display voucher data.
 
-- **Variables**:
-  - **Credentials**: `\{\{username\}\}`, `\{\{password\}\}`
-  - **Server**: `\{\{server_name\}\}`, `\{\{dns_name\}\}`
-  - **Plan**: `\{\{profile\}\}`, `\{\{price\}\}`, `\{\{validity\}\}`, `\{\{time_limit\}\}`, `\{\{data_limit\}\}`
-  - **Network**: `\{\{ip_address\}\}`, `\{\{mac_address\}\}`
-  - **Extras**: `\{\{comment\}\}`, `\{\{copyright\}\}`, `\{\{qrcode\}\}` (supports options like `size=100 fg=red`)
+### Supported Variables
+
+| Variable | Description |
+| :--- | :--- |
+| `\{\{username\}\}` | User's login username |
+| `\{\{password\}\}` | User's login password |
+| `\{\{server_name\}\}` | Hotspot server name |
+| `\{\{dns_name\}\}` | DNS name for login (e.g., `hotspot.lan`) |
+| `\{\{profile\}\}` | User profile/package name |
+| `\{\{price\}\}` | Plan price (formatted) |
+| `\{\{validity\}\}` | Validity duration |
+| `\{\{time_limit\}\}` | Time limit session |
+| `\{\{data_limit\}\}` | Data quota limit |
+| `\{\{ip_address\}\}` | User's IP address |
+| `\{\{mac_address\}\}` | User's MAC address |
+| `\{\{comment\}\}` | User comment |
+| `\{\{copyright\}\}` | Copyright text |
+| `\{\{qrcode\}\}` | Generates a QR Code for login URL |
+
+> [!TIP]
+> The `\{\{qrcode\}\}` variable supports custom attributes for styling, for example: `\{\{qrcode size=100 fg=red\}\}`.
 - **Preview**: Test your template instantly from the editor.
 
 ## <Icon name="Printer" color="info" /> Quick Print
