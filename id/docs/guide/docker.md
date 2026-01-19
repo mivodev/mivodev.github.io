@@ -76,3 +76,31 @@ Jika Anda merasa MIVO bermanfaat, harap pertimbangkan untuk mendukung pengembang
 ---
 *Dibuat dengan <Icon name="Heart" color="danger" /> oleh MivoDev*
 
+
+## <Icon name="RefreshCw" color="warning" /> Cara Update MIVO
+
+Untuk memperbarui MIVO ke versi terbaru (misal dari v1.2.2 ke v1.2.3):
+
+**Menggunakan Docker Run:**
+
+```bash
+# 1. Tarik image terbaru
+docker pull mivodev/mivo:latest
+
+# 2. Hentikan dan hapus container lama
+docker stop mivo
+docker rm mivo
+
+# 3. Jalankan container baru (gunakan perintah yang sama seperti awal)
+docker run -d --name mivo -p 8080:80 ...
+```
+
+**Menggunakan Docker Compose:**
+
+```bash
+# 1. Tarik image terbaru
+docker-compose pull
+
+# 2. Recreate container
+docker-compose up -d
+```

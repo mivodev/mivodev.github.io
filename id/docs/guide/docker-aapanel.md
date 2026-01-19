@@ -103,3 +103,19 @@ Agar MIVO bisa diakses menggunakan domain (contoh: `mivo.domainanda.com`):
 5. **Target URL**: `http://127.0.0.1:8085` (Ganti `8085` sesuai dengan `APP_PORT` Anda).
 6. Simpan dan aktifkan SSL agar lebih aman.
 
+
+## 5. <Icon name="RefreshCw" color="warning" /> Cara Update MIVO
+
+Saat versi baru dirilis (misal v1.2.3), ikuti langkah ini untuk update container di aaPanel:
+
+1.  Masuk ke **Docker** > **Project**.
+2.  Cari project `mivo` Anda dalah daftar.
+3.  Klik tombol **"Rebuild"** atau **"Update"** (tergantung versi aaPanel).
+4.  Konfirmasi. aaPanel akan otomatis melakukan `docker pull` untuk image terbaru dan me-restart service Anda.
+
+**Cara Alternatif (Manual Re-pull):**
+Jika tombol Rebuild tidak muncul atau tidak bekerja:
+1.  Klik **Delete** pada project mivo (Tenang saja, data database Anda di `/www/dk_project/mivo/mivo_data` AMAN dan tidak ikut terhapus).
+2.  Klik **Add Project** lagi.
+3.  Gunakan settingan yang SAMA PERSIS (Path & YAML) seperti sebelumnya.
+4.  Klik **Confirm**. Ini akan memaksa aaPanel untuk mendownload image `latest` yang segar dari server.

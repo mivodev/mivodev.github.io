@@ -103,3 +103,19 @@ To access MIVO via a domain (e.g., `mivo.yourdomain.com`):
 5. **Target URL**: `http://127.0.0.1:8085` (Replace `8085` with your `APP_PORT`).
 6. Save and secure with SSL.
 
+
+## 5. <Icon name="RefreshCw" color="warning" /> Updating MIVO
+
+When a new version is released (e.g. v1.2.3), follow these steps to update your aaPanel container:
+
+1.  Go to **Docker** > **Project**.
+2.  Find your `mivo` project in the list.
+3.  Click the **"Rebuild"** or **"Update"** button (depending on aaPanel version).
+4.  Confirm execution. aaPanel will automatically `git pull` (if linked) or `docker pull` the latest image and restart the service transparently.
+
+**Alternative (Manual Re-pull):**
+If the Rebuild button is missing:
+1.  Click **Delete** on the project (Don't worry, your data in `/www/dk_project/mivo/mivo_data` is safe!).
+2.  Click **Add Project** again.
+3.  Use the exact same settings (Path & YAML).
+4.  Click **Confirm**. This forces aaPanel to download the fresh `latest` image.

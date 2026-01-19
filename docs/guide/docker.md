@@ -77,3 +77,31 @@ If you find MIVO useful, please consider supporting its development. Your contri
 *Created with <Icon name="Heart" color="danger" /> by MivoDev*
 
 
+
+## <Icon name="RefreshCw" color="warning" /> Updating MIVO
+
+To update MIVO to the latest version (e.g. from v1.2.2 to v1.2.3):
+
+**Using Docker Run:**
+
+```bash
+# 1. Pull the latest image
+docker pull mivodev/mivo:latest
+
+# 2. Stop and remove the old container
+docker stop mivo
+docker rm mivo
+
+# 3. Run the new container (use the same command as before)
+docker run -d --name mivo -p 8080:80 ...
+```
+
+**Using Docker Compose:**
+
+```bash
+# 1. Pull the latest image
+docker-compose pull
+
+# 2. Recreate the container
+docker-compose up -d
+```
