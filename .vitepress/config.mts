@@ -1,4 +1,6 @@
 import { defineConfig } from 'vitepress'
+import { createWriteStream } from 'fs'
+import { resolve } from 'path'
 import { sidebarEn, sidebarId } from './config/sidebars'
 import { navEn, navId } from './config/nav'
 
@@ -10,6 +12,13 @@ export default defineConfig({
   lastUpdated: true,
   sitemap: {
     hostname: 'https://mivodev.github.io'
+  },
+  buildEnd: ({ outDir }) => {
+    const sitemap = createWriteStream(resolve(outDir, 'robots.txt'))
+    sitemap.write('User-agent: *\n')
+    sitemap.write('Allow: /\n')
+    sitemap.write('Sitemap: https://mivodev.github.io/sitemap.xml\n')
+    sitemap.end()
   },
   
   head: [
