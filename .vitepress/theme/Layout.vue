@@ -25,6 +25,13 @@ const { Layout } = DefaultTheme
   z-index: -1;
   pointer-events: none;
   overflow: hidden;
+  --orb-opacity-max: 0.2;
+  --orb-opacity-min: 0.15;
+}
+
+:root.dark .mivo-bg {
+  --orb-opacity-max: 0.05;
+  --orb-opacity-min: 0.03;
 }
 
 .mivo-grid {
@@ -43,12 +50,8 @@ const { Layout } = DefaultTheme
   position: absolute;
   border-radius: 9999px;
   filter: blur(100px);
-  opacity: 0.2;
+  opacity: var(--orb-opacity-max);
   animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-:root.dark .mivo-orb {
-  opacity: 0.05;
 }
 
 .orb-1 {
@@ -71,12 +74,7 @@ const { Layout } = DefaultTheme
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 0.2; }
-  50% { opacity: 0.15; }
-}
-
-:root.dark @keyframes pulse {
-  0%, 100% { opacity: 0.05; }
-  50% { opacity: 0.03; }
+  0%, 100% { opacity: var(--orb-opacity-max); }
+  50% { opacity: var(--orb-opacity-min); }
 }
 </style>
