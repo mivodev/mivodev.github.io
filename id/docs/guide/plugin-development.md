@@ -28,11 +28,12 @@ File `plugin.php` Anda **wajib** dimulai dengan blok komentar khusus. Crawler Re
  * Version: 1.0.0
  * Author: NamaAnda
  * Category: Hotspot Tools
+ * Scope: Global
  * Tags: theme, dark-mode, ui
  * Core Version: >=1.2.0
  */
 
-use App\Services\Hook;
+use App\Core\Hooks;
 
 // Logika plugin dimulai di sini...
 ```
@@ -41,7 +42,8 @@ use App\Services\Hook;
 - **Plugin Name**: Nama yang ditampilkan.
 - **Description**: Ringkasan pendek (maks 160 karakter).
 - **Version**: Format SemVer (contoh: `1.0.0`).
-- **Category**: Salah satu dari: `Hotspot Tools`, `System Tools`, `Payment Gateway`, `Reports`.
+- **Category**: Salah satu dari: `Hotspot Tools`, `System Tools`, `Payment Gateway`, `Reports`, `Language Pack`.
+- **Scope**: `Global` (tersedia di mana saja) atau `Session` (spesifik untuk sesi router).
 - **Tags**: Kata kunci pencarian (dipisahkan koma).
 
 ## Aturan Rilis & Registry

@@ -28,11 +28,12 @@ Your `plugin.php` **must** start with a specific comment block. The Registry cra
  * Version: 1.0.0
  * Author: YourName
  * Category: Hotspot Tools
+ * Scope: Global
  * Tags: theme, dark-mode, ui
  * Core Version: >=1.2.0
  */
 
-use App\Services\Hook;
+use App\Core\Hooks;
 
 // Plugin logic starts here...
 ```
@@ -41,7 +42,8 @@ use App\Services\Hook;
 - **Plugin Name**: Displayed title.
 - **Description**: Short summary (max 160 chars).
 - **Version**: SemVer format (e.g., `1.0.0`).
-- **Category**: One of: `Hotspot Tools`, `System Tools`, `Payment Gateway`, `Reports`.
+- **Category**: One of: `Hotspot Tools`, `System Tools`, `Payment Gateway`, `Reports`, `Language Pack`.
+- **Scope**: `Global` (available everywhere) or `Session` (specific to a router session).
 - **Tags**: Comma-separated search keywords.
 
 ## Release & Registry Rules
