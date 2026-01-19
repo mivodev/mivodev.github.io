@@ -33,7 +33,7 @@ For a more permanent setup, use `docker-compose.yml`:
 ```yaml
 services:
   mivo:
-    image: ghcr.io/mivodev/mivo:latest
+    image: mivodev/mivo:latest
     container_name: mivo
     restart: unless-stopped
     ports:
