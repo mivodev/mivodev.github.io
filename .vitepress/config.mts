@@ -20,7 +20,8 @@ export default defineConfig({
     ['meta', { property: 'og:image', content: 'https://mivodev.github.io/og-image.png' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:image', content: 'https://mivodev.github.io/og-image.png' }],
-    ['meta', { name: 'twitter:site', content: '@dyzulkdev' }]
+    ['meta', { name: 'twitter:site', content: '@dyzulkdev' }],
+    ['meta', { name: 'google-site-verification', content: '4O3WAvbJ9_RwH-MmOznbAXnzTz_wEKzuIhmNjx3mXPs' }]
   ],
 
   transformHead: ({ pageData }) => {
