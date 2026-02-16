@@ -4,11 +4,13 @@ on:
   push:
     branches: [ main ]
 
+# Permissions required for deploying to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -20,12 +22,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Not required if lastUpdated is not enabled in VitePress
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20 # Menggunakan versi LTS yang stabil
           cache: npm
 
       - name: Install Dependencies
@@ -33,6 +35,14 @@ jobs:
 
       - name: Build with VitePress
         run: npm run build
+
+      # -------------------------------------------------------
+      # LANGKAH KRUSIAL: Membuat file CNAME
+      # Ini memastikan GitHub Pages tahu domain ini milik Anda
+      # setiap kali deploy baru dilakukan.
+      # -------------------------------------------------------
+      - name: Create CNAME
+        run: echo "mivo.dyzulk.com" > .vitepress/dist/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
