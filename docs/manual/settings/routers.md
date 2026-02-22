@@ -20,7 +20,7 @@ MIVO will attempt to connect to the router in real-time. If the status is green,
 
 Protect your configuration by creating backups of your MIVO database.
 
-- **Backup**: Creates a JSON file containing all router sessions and global settings.
+- **Backup**: Creates a MIVO file containing all router sessions and global settings.
 - **Restore**: Upload a previously saved MIVO backup file to recover your data.
 
 > [!CAUTION]
