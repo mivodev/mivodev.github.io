@@ -20,7 +20,7 @@ MIVO akan mencoba terhubung ke router secara real-time. Jika status berwarna hij
 
 Lindungi konfigurasi Anda dengan membuat cadangan (backup) database MIVO Anda.
 
-- **Backup**: Membuat file JSON yang berisi semua sesi router dan pengaturan global.
+- **Backup**: Membuat file MIVO yang berisi semua sesi router dan pengaturan global.
 - **Restore**: Unggah file cadangan MIVO yang telah disimpan sebelumnya untuk memulihkan data Anda.
 
 > [!CAUTION]
