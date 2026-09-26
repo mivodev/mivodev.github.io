@@ -4,6 +4,9 @@ on:
   push:
     branches: [ main ]
 
+  # Allow the workflow to be triggered manually from GitHub Actions
+  workflow_dispatch:
+
 # Permissions required for deploying to GitHub Pages
 permissions:
   contents: read
@@ -37,9 +40,9 @@ jobs:
         run: npm run build
 
       # -------------------------------------------------------
-      # LANGKAH KRUSIAL: Membuat file CNAME
-      # Ini memastikan GitHub Pages tahu domain ini milik Anda
-      # setiap kali deploy baru dilakukan.
+      # CRITICAL STEP: Create the CNAME file
+      # This ensures GitHub Pages uses the custom domain
+      # after every deployment.
       # -------------------------------------------------------
       - name: Create CNAME
         run: echo "mivo.dyzulk.com" > .vitepress/dist/CNAME
