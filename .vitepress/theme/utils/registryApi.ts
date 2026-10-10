@@ -1,7 +1,7 @@
 type RegistryResource = 'plugins' | 'releases' | 'localPlugins'
 
 const registryBaseUrl = (
-    import.meta.env.VITE_REGISTRY_API_BASE_URL || 'https://gh.mivo.dpdns.org/registry'
+    import.meta.env.VITE_REGISTRY_API_BASE_URL || 'https://mivodev.github.io/registry'
 ).replace(/\/+$/, '')
 
 const registryEndpoints: Record<RegistryResource, string> = {
