@@ -4,6 +4,7 @@
     "description": "Documentation for MIVO",
     "main": "index.js",
     "type": "module",
+    "packageManager": "11.25.0",
     "scripts": {
         "dev": "vitepress dev",
         "build": "vitepress build",

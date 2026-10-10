@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { fetchRegistryJson } from '../utils/registryApi'
 
 const releases = ref([])
 const loading = ref(true)
@@ -15,9 +16,7 @@ const formatSize = (bytes) => {
 
 onMounted(async () => {
     try {
-        const res = await fetch('https://gh.mivo.dpdns.org/registry/releases.json')
-        if (!res.ok) throw new Error('Failed to load releases')
-        releases.value = await res.json()
+        releases.value = await fetchRegistryJson('releases')
     } catch (e) {
         error.value = e.message
         console.error(e)

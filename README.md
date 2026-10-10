@@ -12,17 +12,23 @@ This project uses [VitePress](https://vitepress.dev). To run the documentation l
 
 1.  **Install Dependencies**:
     ```bash
-    npm install
+    pnpm install
     ```
 
 2.  **Start Development Server**:
     ```bash
-    npm run dev
+    pnpm dev
     ```
+
+    Registry API requests use `https://gh.mivo.dpdns.org/registry` by default. To use another registry, create a `.env.local` file in the project root and set its base URL:
+    ```env
+    VITE_REGISTRY_API_BASE_URL=https://example.com/registry
+    ```
+    This value is read by Vite at development/build time.
 
 3.  **Build**:
     ```bash
-    npm run build
+    pnpm build
     ```
 
 ## Contributing

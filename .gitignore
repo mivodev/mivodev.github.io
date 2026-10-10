@@ -8,3 +8,7 @@ Thumbs.db
 .vitepress/cache
 .vitepress/dist-ssr
 *.local
+
+
+.env
+!.env.example

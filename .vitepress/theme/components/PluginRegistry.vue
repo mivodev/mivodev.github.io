@@ -2,6 +2,7 @@
 import { ref, computed, onMounted } from 'vue'
 import MarkdownIt from 'markdown-it'
 import Modal from './Modal.vue'
+import { fetchRegistryJson } from '../utils/registryApi'
 
 const props = defineProps({
     title: { type: String, default: 'Plugin Registry' },
@@ -45,15 +46,12 @@ const fetchPlugins = async () => {
     loading.value = true
     try {
         // Fetch from the external registry repository
-        const response = await fetch('https://gh.mivo.dpdns.org/registry/plugins.json')
-        if (!response.ok) throw new Error('Failed to fetch plugins')
-        plugins.value = await response.json()
+        plugins.value = await fetchRegistryJson('plugins')
     } catch (e) {
         console.error(e)
         // Fallback for local dev or if registry is down
         try {
-            const localRes = await fetch('/plugins.json')
-            if (localRes.ok) plugins.value = await localRes.json()
+            plugins.value = await fetchRegistryJson('localPlugins')
         } catch (err) {
             console.error('Local fallback failed', err)
         }
