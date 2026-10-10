@@ -45,7 +45,7 @@ const fetchPlugins = async () => {
     loading.value = true
     try {
         // Fetch from the external registry repository
-        const response = await fetch('https://mivodev.github.io/registry/plugins.json')
+        const response = await fetch('https://gh.mivo.dpdns.org/registry/plugins.json')
         if (!response.ok) throw new Error('Failed to fetch plugins')
         plugins.value = await response.json()
     } catch (e) {
