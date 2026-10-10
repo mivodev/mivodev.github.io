@@ -42,7 +42,14 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build with VitePress
-        run: pnpm run build
+        env:
+          VITE_REGISTRY_API_BASE_URL: ${{ vars.VITE_REGISTRY_API_BASE_URL }}
+        run: |
+          if [ -z "$VITE_REGISTRY_API_BASE_URL" ]; then
+            echo "::error::Set the VITE_REGISTRY_API_BASE_URL Actions variable before deploying."
+            exit 1
+          fi
+          pnpm run build
 
       # -------------------------------------------------------
       # CRITICAL STEP: Create the CNAME file

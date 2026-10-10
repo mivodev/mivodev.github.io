@@ -20,11 +20,13 @@ This project uses [VitePress](https://vitepress.dev). To run the documentation l
     pnpm dev
     ```
 
-    Registry API requests use `https://gh.mivo.dpdns.org/registry` by default. To use another registry, create a `.env.local` file in the project root and set its base URL:
+    Set the registry base URL in a `.env.local` file in the project root:
     ```env
-    VITE_REGISTRY_API_BASE_URL=https://example.com/registry
+    VITE_REGISTRY_API_BASE_URL=https://your-registry.example/registry
     ```
-    This value is read by Vite at development/build time.
+    The value is read by Vite at development/build time. For production, set `VITE_REGISTRY_API_BASE_URL` as a GitHub Actions repository variable (`Settings > Secrets and variables > Actions > Variables`).
+
+    CORS must be configured by the registry server (or its reverse proxy/CDN). Frontend `VITE_*` variables cannot set CORS response headers, because browsers only accept those headers from the server that responds to the request.
 
 3.  **Build**:
     ```bash
