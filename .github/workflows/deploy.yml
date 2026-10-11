@@ -41,16 +41,18 @@ jobs:
 
       - name: Build static site
         env:
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
           NEXT_PUBLIC_REGISTRY_API_BASE_URL: ${{ vars.NEXT_PUBLIC_REGISTRY_API_BASE_URL }}
           NEXT_PUBLIC_ALGOLIA_APP_ID: ${{ vars.NEXT_PUBLIC_ALGOLIA_APP_ID }}
           NEXT_PUBLIC_ALGOLIA_SEARCH_KEY: ${{ vars.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY }}
           ALGOLIA_WRITE_KEY: ${{ secrets.ALGOLIA_WRITE_KEY }}
         run: |
-          if [ -z "$NEXT_PUBLIC_REGISTRY_API_BASE_URL" ] || \
+          if [ -z "$NEXT_PUBLIC_SITE_URL" ] || \
+             [ -z "$NEXT_PUBLIC_REGISTRY_API_BASE_URL" ] || \
              [ -z "$NEXT_PUBLIC_ALGOLIA_APP_ID" ] || \
              [ -z "$NEXT_PUBLIC_ALGOLIA_SEARCH_KEY" ] || \
              [ -z "$ALGOLIA_WRITE_KEY" ]; then
-            echo "::error::Set NEXT_PUBLIC_REGISTRY_API_BASE_URL, NEXT_PUBLIC_ALGOLIA_APP_ID, and NEXT_PUBLIC_ALGOLIA_SEARCH_KEY as Actions variables, and ALGOLIA_WRITE_KEY as an Actions secret."
+            echo "::error::Set NEXT_PUBLIC_SITE_URL, NEXT_PUBLIC_REGISTRY_API_BASE_URL, NEXT_PUBLIC_ALGOLIA_APP_ID, and NEXT_PUBLIC_ALGOLIA_SEARCH_KEY as Actions variables, and ALGOLIA_WRITE_KEY as an Actions secret."
             exit 1
           fi
           pnpm run build

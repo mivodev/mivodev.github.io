@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Provider } from "@/components/provider";
+import { siteUrl } from "@/lib/site-config";
 import "./global.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mivodev.github.io"),
+  metadataBase: new URL(siteUrl),
   title: "MIVO | Mikrotik Voucher Management",
   description:
     "Modern, lightweight, and efficient Mikrotik Voucher Management for low-end devices.",

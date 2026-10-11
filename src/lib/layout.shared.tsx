@@ -1,80 +1,109 @@
-import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
-import { BookOpenCheck, BookOpenText, Package, Puzzle } from 'lucide-react';
-import { appName, gitConfig } from './shared';
+import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
+import { BookOpenCheck, BookOpenText, Package, Puzzle } from "lucide-react";
+import Image from "next/image";
+import { appName, gitConfig } from "./shared";
 
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
-      title: appName,
-      url: '/',
+      title: (
+        <span className="inline-flex items-center gap-2">
+          <Image
+            src="/brand/logo-m.svg"
+            alt=""
+            aria-hidden="true"
+            width={28}
+            height={28}
+            className="size-7 dark:hidden"
+          />
+          <Image
+            src="/brand/logo-m-dark.svg"
+            alt=""
+            aria-hidden="true"
+            width={28}
+            height={28}
+            className="hidden size-7 dark:block"
+          />
+          <Image
+            src="/brand/logo.png"
+            alt={appName}
+            width={88}
+            height={29}
+            className="h-[1.8rem] w-auto dark:invert"
+          />
+        </span>
+      ),
+      url: "/",
     },
     links: [
-      { text: 'Home', url: '/' },
+      { text: "Home", url: "/" },
       {
-        type: 'menu',
-        text: 'Docs',
+        type: "menu",
+        text: "Docs",
         items: [
           {
-            text: 'Guide',
-            url: '/docs/guide',
-            active: 'nested-url',
+            text: "Guide",
+            url: "/docs/guide",
+            active: "nested-url",
             icon: <BookOpenCheck />,
-            description: 'Install MIVO and get started with the essential setup guides.',
+            description:
+              "Install MIVO and get started with the essential setup guides.",
           },
           {
-            text: 'Manual',
-            url: '/docs/manual',
-            active: 'nested-url',
+            text: "Manual",
+            url: "/docs/manual",
+            active: "nested-url",
             icon: <BookOpenText />,
-            description: 'Explore detailed references for MIVO features and settings.',
+            description:
+              "Explore detailed references for MIVO features and settings.",
           },
         ],
       },
       {
-        type: 'menu',
-        text: 'Downloads',
+        type: "menu",
+        text: "Downloads",
         items: [
           {
-            text: 'Plugins',
-            url: '/plugins',
+            text: "Plugins",
+            url: "/plugins",
             icon: <Puzzle />,
-            description: 'Browse community plugins that extend MIVO.',
+            description: "Browse community plugins that extend MIVO.",
           },
           {
-            text: 'Releases',
-            url: '/releases',
+            text: "Releases",
+            url: "/releases",
             icon: <Package />,
-            description: 'Download the latest and previous MIVO versions.',
+            description: "Download the latest and previous MIVO versions.",
           },
         ],
       },
       {
-        type: 'menu',
-        text: 'Community',
+        type: "menu",
+        text: "Community",
         items: [
           {
-            text: 'Changelog',
-            url: 'https://github.com/mivodev/mivo/releases',
+            text: "Changelog",
+            url: "https://github.com/mivodev/mivo/releases",
             external: true,
-            description: 'Read the project changelog on GitHub.',
+            description: "Read the project changelog on GitHub.",
           },
           {
-            text: 'Contributing',
-            url: 'https://github.com/mivodev/mivo/blob/main/CONTRIBUTING.md',
+            text: "Contributing",
+            url: "https://github.com/mivodev/mivo/blob/main/CONTRIBUTING.md",
             external: true,
-            description: 'Learn how to contribute to MIVO.',
+            description: "Learn how to contribute to MIVO.",
           },
           {
-            text: 'Forum (Discussions)',
-            url: 'https://github.com/orgs/mivodev/discussions',
+            text: "Forum (Discussions)",
+            url: "https://github.com/orgs/mivodev/discussions",
             external: true,
-            description: 'Ask questions and share ideas with the community.',
+            description: "Ask questions and share ideas with the community.",
           },
           {
-            text: 'Star on GitHub',
-            url: 'https://github.com/mivodev/mivo/stargazers',
+            text: "Star on GitHub",
+            url: "https://github.com/mivodev/mivo/stargazers",
             external: true,
-            description: 'Support the project by starring the repository.',
+            description: "Support the project by starring the repository.",
           },
         ],
       },

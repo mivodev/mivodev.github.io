@@ -17,6 +17,13 @@ yarn dev
 
 Open http://localhost:3000 with your browser to see the result.
 
+### Site URL configuration
+
+Set `NEXT_PUBLIC_SITE_URL` to the public origin of the deployed site. It is used
+as the metadata base URL; local development defaults to `http://localhost:3000`.
+Set it as a GitHub Actions variable for deployments. The registry endpoint can
+be configured separately with `NEXT_PUBLIC_REGISTRY_API_BASE_URL`.
+
 ## Explore
 
 In the project, you can see:
