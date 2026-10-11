@@ -1,11 +1,38 @@
-# docs
+<div align="center">
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="./public/brand/logo-wordmark-bg-black.svg"
+  />
+  <img
+    src="./public/brand/logo-wordmark-bg-white.svg"
+    alt="MIVO — Mikrotik Voucher Management"
+    width="420"
+  />
+</picture>
 
-It is a Next.js app with [Static Export](https://nextjs.org/docs/app/guides/static-exports) configured.
+### Mikrotik Voucher Management
 
-Run development server:
+**Modern, lightweight, and efficient voucher management for MikroTik.**
+
+[![Next.js](https://img.shields.io/badge/Website-Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
+[![Fumadocs](https://img.shields.io/badge/Documentation-Fumadocs-5B6CFF?style=for-the-badge)](https://fumadocs.dev)
+[![TypeScript](https://img.shields.io/badge/Language-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+
+---
+
+_The official documentation website for MIVO, built with Next.js and Fumadocs._
+
+</div>
+
+---
+
+This repository contains the MIVO documentation website, built with
+[Next.js](https://nextjs.org) and [Fumadocs](https://fumadocs.dev), with
+[static export](https://nextjs.org/docs/app/guides/static-exports) configured.
+
+## Run locally
 
 ```bash
 npm run dev

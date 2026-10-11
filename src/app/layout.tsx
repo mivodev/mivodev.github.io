@@ -10,13 +10,22 @@ export const metadata: Metadata = {
   description:
     "Modern, lightweight, and efficient Mikrotik Voucher Management for low-end devices.",
   icons: {
-    icon: "/brand/favicon.ico",
+    icon: [
+      {
+        url: "/brand/logo-m-dark.svg",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/brand/logo-m.svg",
+        media: "(prefers-color-scheme: light)",
+      },
+    ],
   },
   openGraph: {
     title: "MIVO | Mikrotik Voucher Management",
     description:
       "Modern, lightweight, and efficient Mikrotik Voucher Management for low-end devices.",
-    images: ["/brand/og-image.png"],
+    images: ["/brand/logo-wordmark-bg-white.png"],
   },
 };
 

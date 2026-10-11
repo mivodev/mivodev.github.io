@@ -9,27 +9,19 @@ export function baseOptions(): BaseLayoutProps {
       title: (
         <span className="inline-flex items-center gap-2">
           <Image
-            src="/brand/logo-m.svg"
-            alt=""
-            aria-hidden="true"
-            width={28}
-            height={28}
-            className="size-7 dark:hidden"
-          />
-          <Image
-            src="/brand/logo-m-dark.svg"
-            alt=""
-            aria-hidden="true"
-            width={28}
-            height={28}
-            className="hidden size-7 dark:block"
-          />
-          <Image
-            src="/brand/logo.png"
+            src="/brand/logo-wordmark-light.svg"
             alt={appName}
-            width={88}
-            height={29}
-            className="h-[1.8rem] w-auto dark:invert"
+            width={120}
+            height={80}
+            className="h-9 w-[7.5rem] object-cover dark:hidden"
+          />
+          <Image
+            src="/brand/logo-wordmark-dark.svg"
+            alt=""
+            aria-hidden="true"
+            width={120}
+            height={80}
+            className="hidden h-9 w-[7.5rem] object-cover dark:block"
           />
         </span>
       ),
