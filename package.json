@@ -1,33 +1,36 @@
 {
-    "name": "mivo-docs",
-    "version": "1.0.0",
-    "description": "Documentation for MIVO",
-    "main": "index.js",
-    "type": "module",
-    "packageManager": "pnpm@11.25.0",
-    "scripts": {
-        "dev": "vitepress dev",
-        "build": "vitepress build",
-        "preview": "vitepress preview"
-    },
-    "keywords": [
-        "mivo",
-        "documentation",
-        "vitepress"
-    ],
-    "author": "MivoDev",
-    "license": "MIT",
-    "devDependencies": {
-        "@types/node": "^25.0.9",
-        "autoprefixer": "^10.4.23",
-        "postcss": "^8.5.6",
-        "tailwindcss": "^3.4.17",
-        "vitepress": "^1.0.0",
-        "vue": "^3.4.0"
-    },
-    "dependencies": {
-        "flag-icons": "^7.5.0",
-        "lucide-vue-next": "^0.562.0",
-        "markdown-it": "^14.1.0"
-    }
+  "name": "mivodev.github.io",
+  "version": "0.0.43",
+  "private": true,
+  "scripts": {
+    "build": "next build && node --env-file-if-exists=.env.local scripts/sync-content.ts",
+    "dev": "next dev",
+    "start": "serve out",
+    "types:check": "next typegen && tsc --noEmit",
+    "lint": "biome check",
+    "format": "biome format --write"
+  },
+  "dependencies": {
+    "cn": "^0.4.0",
+    "fumadocs-core": "16.17.1",
+    "fumadocs-mdx": "15.4.7",
+    "fumadocs-ui": "npm:@fumadocs/base-ui@16.17.1",
+    "lucide-react": "^1.50.0",
+    "next": "16.3.8",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "algoliasearch": "^5.59.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/mdx": "^2.0.14",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "postcss": "^8.5.28",
+    "serve": "^14.2.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "@biomejs/biome": "^2.5.15"
+  }
 }

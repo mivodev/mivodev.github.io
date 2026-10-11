@@ -1,42 +1,47 @@
-# MIVO Documentation
+# docs
 
-This repository hosts the source code for the official [MIVO Documentation](https://mivodev.github.io).
+This is a Next.js application generated with
+[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
 
-## Overview
+It is a Next.js app with [Static Export](https://nextjs.org/docs/app/guides/static-exports) configured.
 
-MIVO (Mikrotik Voucher) is a modern, lightweight voucher management system. This documentation covers installation, configuration, and usage guides.
+Run development server:
 
-## Running Locally
+```bash
+npm run dev
+# or
+pnpm dev
+# or
+yarn dev
+```
 
-This project uses [VitePress](https://vitepress.dev). To run the documentation locally:
+Open http://localhost:3000 with your browser to see the result.
 
-1.  **Install Dependencies**:
-    ```bash
-    pnpm install
-    ```
+## Explore
 
-2.  **Start Development Server**:
-    ```bash
-    pnpm dev
-    ```
+In the project, you can see:
 
-    Set the registry base URL in a `.env.local` file in the project root:
-    ```env
-    VITE_REGISTRY_API_BASE_URL=https://your-registry.example/registry
-    ```
-    The value is read by Vite at development/build time. For production, set `VITE_REGISTRY_API_BASE_URL` as a GitHub Actions repository variable (`Settings > Secrets and variables > Actions > Variables`).
+- `lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
+- `lib/layout.shared.tsx`: Shared options for layouts, optional but preferred to keep.
 
-    CORS must be configured by the registry server (or its reverse proxy/CDN). Frontend `VITE_*` variables cannot set CORS response headers, because browsers only accept those headers from the server that responds to the request.
+| Route                     | Description                                            |
+| ------------------------- | ------------------------------------------------------ |
+| `app/(home)`              | The route group for your landing page and other pages. |
+| `app/docs`                | The documentation layout and pages.                    |
+| `app/api/search/route.ts` | The Route Handler for search.                          |
 
-3.  **Build**:
-    ```bash
-    pnpm build
-    ```
+### Fumadocs MDX
 
-## Contributing
+Collections are defined with the [Macro API](https://fumadocs.dev/docs/mdx/macro) in `lib/source.ts`.
 
-We welcome contributions! Please see our [Contributing Guide](https://github.com/dyzulk/mivo/blob/main/CONTRIBUTING.md) for more details.
+Read the [Introduction](https://fumadocs.dev/docs/mdx) for further details.
 
-## License
+## Learn More
 
-Code released under the [MIT License](https://github.com/mivodev/mivodev.github.io/blob/main/LICENSE).
+To learn more about Next.js and Fumadocs, take a look at the following
+resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
+  features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Fumadocs](https://fumadocs.dev) - learn about Fumadocs

@@ -1,0 +1,14 @@
+{
+  "title": "Manual",
+  "description": "Learn how to use and configure MIVO.",
+  "icon": "BookOpenText",
+  "root": true,
+  "pages": [
+    "---Manual---",
+    "index",
+    "---Global Settings---",
+    "settings",
+    "---Router Operations---",
+    "router"
+  ]
+}

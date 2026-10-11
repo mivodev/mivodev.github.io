@@ -1,0 +1,19 @@
+{
+  "title": "Guide",
+  "description": "Installation and development guides for MIVO.",
+  "icon": "BookOpenCheck",
+  "root": true,
+  "pages": [
+    "---Introduction---",
+    "index",
+    "---Installation---",
+    "installation",
+    "docker",
+    "docker-aapanel",
+    "---Development---",
+    "plugin-development",
+    "---Support---",
+    "external:[Contribute](https://github.com/mivodev/mivo/blob/main/CONTRIBUTING.md)",
+    "external:[Donate](https://sociabuzz.com/dyzulkdev/tribe)"
+  ]
+}

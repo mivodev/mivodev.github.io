@@ -24,8 +24,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Not required if lastUpdated is not enabled in VitePress
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -41,28 +39,26 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build with VitePress
+      - name: Build static site
         env:
-          VITE_REGISTRY_API_BASE_URL: ${{ vars.VITE_REGISTRY_API_BASE_URL }}
+          NEXT_PUBLIC_REGISTRY_API_BASE_URL: ${{ vars.NEXT_PUBLIC_REGISTRY_API_BASE_URL }}
+          NEXT_PUBLIC_ALGOLIA_APP_ID: ${{ vars.NEXT_PUBLIC_ALGOLIA_APP_ID }}
+          NEXT_PUBLIC_ALGOLIA_SEARCH_KEY: ${{ vars.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY }}
+          ALGOLIA_WRITE_KEY: ${{ secrets.ALGOLIA_WRITE_KEY }}
         run: |
-          if [ -z "$VITE_REGISTRY_API_BASE_URL" ]; then
-            echo "::error::Set the VITE_REGISTRY_API_BASE_URL Actions variable before deploying."
+          if [ -z "$NEXT_PUBLIC_REGISTRY_API_BASE_URL" ] || \
+             [ -z "$NEXT_PUBLIC_ALGOLIA_APP_ID" ] || \
+             [ -z "$NEXT_PUBLIC_ALGOLIA_SEARCH_KEY" ] || \
+             [ -z "$ALGOLIA_WRITE_KEY" ]; then
+            echo "::error::Set NEXT_PUBLIC_REGISTRY_API_BASE_URL, NEXT_PUBLIC_ALGOLIA_APP_ID, and NEXT_PUBLIC_ALGOLIA_SEARCH_KEY as Actions variables, and ALGOLIA_WRITE_KEY as an Actions secret."
             exit 1
           fi
           pnpm run build
 
-      # -------------------------------------------------------
-      # CRITICAL STEP: Create the CNAME file
-      # This ensures GitHub Pages uses the custom domain
-      # after every deployment.
-      # -------------------------------------------------------
-      - name: Create CNAME
-        run: echo "mivo.dyzulk.com" > .vitepress/dist/CNAME
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .vitepress/dist
+          path: out
 
   deploy:
     environment:

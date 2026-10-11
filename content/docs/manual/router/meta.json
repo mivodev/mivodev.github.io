@@ -1,0 +1,17 @@
+{
+  "title": "Router Operations",
+  "description": "Manage and configure routers, including setup, maintenance, and troubleshooting.",
+  "icon": "Router",
+  "pages": [
+    "---Overview---",
+    "index",
+    "dashboard",
+    "---Hotspot---",
+    "hotspot",
+    "quick-print",
+    "---Reports---",
+    "reports",
+    "---Tools---",
+    "tools"
+  ]
+}

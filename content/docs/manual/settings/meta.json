@@ -1,0 +1,19 @@
+{
+  "title": "Global Settings",
+  "icon": "Settings2",
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Network---",
+    "routers",
+    "---Customization---",
+    "voucher-templates",
+    "logos",
+    "---Extensions---",
+    "plugins",
+    "---API---",
+    "api-cors",
+    "---System---",
+    "system"
+  ]
+}
