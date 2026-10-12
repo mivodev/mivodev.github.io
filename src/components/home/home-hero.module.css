@@ -46,56 +46,6 @@
   mask-image: radial-gradient(ellipse, #000 12%, transparent 72%);
 }
 
-.visual {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  border: 1px solid color-mix(in oklab, var(--color-fd-border) 75%, transparent);
-  background: color-mix(in oklab, var(--color-fd-background) 62%, transparent);
-  box-shadow:
-    0 16px 48px -32px rgb(0 0 0 / 26%),
-    inset 0 1px 0 rgb(255 255 255 / 55%);
-  backdrop-filter: blur(12px);
-}
-
-.visual::before,
-.visual::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  pointer-events: none;
-  content: "";
-  transform: translate(-50%, -50%);
-}
-
-.visual::before {
-  width: min(88%, 24rem);
-  background:
-    radial-gradient(circle, rgb(90 90 90 / 32%) 1px, transparent 1.7px),
-    radial-gradient(circle at 50% 48%, rgb(130 130 130 / 15%), transparent 68%);
-  background-size:
-    8px 8px,
-    100% 100%;
-  mask-image: radial-gradient(circle, #000 12%, transparent 72%);
-}
-
-.visual::after {
-  width: min(72%, 19rem);
-  border: 1px solid rgb(120 120 120 / 18%);
-  box-shadow:
-    0 0 0 1.5rem rgb(120 120 120 / 3%),
-    0 0 0 3rem rgb(120 120 120 / 2%);
-}
-
-.visual img {
-  position: relative;
-  z-index: 1;
-  filter: drop-shadow(0 12px 28px rgb(0 0 0 / 14%));
-}
-
 :global(.dark) .hero {
   background:
     radial-gradient(ellipse at 82% 16%, rgb(255 255 255 / 9%), transparent 34%),
@@ -119,33 +69,6 @@
   background-size:
     9px 9px,
     100% 100%;
-}
-
-:global(.dark) .visual {
-  background: color-mix(in oklab, var(--color-fd-background) 68%, transparent);
-  box-shadow:
-    0 16px 48px -32px rgb(0 0 0 / 70%),
-    inset 0 1px 0 rgb(255 255 255 / 8%);
-}
-
-:global(.dark) .visual::before {
-  background:
-    radial-gradient(circle, rgb(255 255 255 / 35%) 1px, transparent 1.7px),
-    radial-gradient(circle at 50% 48%, rgb(255 255 255 / 12%), transparent 68%);
-  background-size:
-    8px 8px,
-    100% 100%;
-}
-
-:global(.dark) .visual::after {
-  border-color: rgb(255 255 255 / 14%);
-  box-shadow:
-    0 0 0 1.5rem rgb(255 255 255 / 3%),
-    0 0 0 3rem rgb(255 255 255 / 2%);
-}
-
-:global(.dark) .visual img {
-  filter: drop-shadow(0 12px 28px rgb(0 0 0 / 32%));
 }
 
 @media (min-width: 768px) {

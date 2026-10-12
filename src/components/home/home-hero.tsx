@@ -38,24 +38,22 @@ export function HomeHero() {
         </div>
       </div>
 
-      <div
-        className={`${styles.visual} flex min-h-64 items-center justify-center rounded-2xl p-10 md:min-h-80`}
-      >
+      <div className="flex items-center justify-center md:justify-end">
         <Image
-          src="/brand/logo-m.svg"
-          alt="MIVO logo"
-          width={220}
-          height={220}
-          className="size-44 dark:hidden md:size-52"
+          src="/brand/logo-wordmark-light.svg"
+          alt="MIVO"
+          width={632}
+          height={424}
+          className="h-auto w-full max-w-[28rem] dark:hidden"
           priority
         />
         <Image
-          src="/brand/logo-m-dark.svg"
-          alt=""
+          src="/brand/logo-wordmark-dark.svg"
+          alt="MIVO"
           aria-hidden="true"
-          width={220}
-          height={220}
-          className="hidden size-44 dark:block md:size-52"
+          width={632}
+          height={424}
+          className="hidden h-auto w-full max-w-[28rem] dark:block"
           priority
         />
       </div>
