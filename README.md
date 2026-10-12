@@ -3,10 +3,10 @@
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
-    srcset="./public/brand/logo-wordmark-bg-black.svg"
+    srcset="./public/brand/logo-wordmark-black.svg"
   />
   <img
-    src="./public/brand/logo-wordmark-bg-white.svg"
+    src="./public/brand/logo-wordmark-white.svg"
     alt="MIVO — Mikrotik Voucher Management"
     width="420"
   />
