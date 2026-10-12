@@ -44,7 +44,7 @@ export function HomeHero() {
           alt="MIVO"
           width={632}
           height={424}
-          className="h-auto w-full max-w-[28rem] dark:hidden"
+          className="h-auto w-full max-w-md dark:hidden"
           priority
         />
         <Image
@@ -53,7 +53,7 @@ export function HomeHero() {
           aria-hidden="true"
           width={632}
           height={424}
-          className="hidden h-auto w-full max-w-[28rem] dark:block"
+          className="hidden h-auto w-full max-w-md dark:block"
           priority
         />
       </div>

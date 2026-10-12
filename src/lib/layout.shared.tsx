@@ -13,7 +13,7 @@ export function baseOptions(): BaseLayoutProps {
             alt={appName}
             width={120}
             height={80}
-            className="h-9 w-[7.5rem] object-cover dark:hidden"
+            className="h-9 w-30 object-cover dark:hidden"
           />
           <Image
             src="/brand/logo-wordmark-dark.svg"
@@ -21,7 +21,7 @@ export function baseOptions(): BaseLayoutProps {
             aria-hidden="true"
             width={120}
             height={80}
-            className="hidden h-9 w-[7.5rem] object-cover dark:block"
+            className="hidden h-9 w-30 object-cover dark:block"
           />
         </span>
       ),
